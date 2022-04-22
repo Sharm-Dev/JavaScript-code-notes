@@ -25,6 +25,11 @@ p {
     margin: 20px 0;
 }
 
+#btns{
+    display: flex;
+    flex-direction: column;
+}
+
 button {
     color:#016f32;
     width:150px;
@@ -33,5 +38,7 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 2px;
+    align-self: center;
+    margin: 2px;
 }
 
