@@ -1,5 +1,5 @@
 let firstCard = Math.floor(Math.random() * 11) + 2;
-let secondCard = Math.floor(Math.random() * 11) + 2;
+let secondCard = Math.floor(Math.random() * 11) + 2; 
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -28,11 +28,21 @@ function startGame() {
     messageEl.textContent = message;
 };
 
+function newCard() {
+  console.log("Drawing a new card");
+  // 1. Create a card variable, and hard code its value to a number (2-11)
+  let thirdCard = Math.floor(Math.random() * 11) + 2; 
+  
+  
+  
+  // 2. Add the new card to the sum variable
 
+  sum += thirdCard;
 
-// let resultEl = document.getElementById("result");
-// let resultToAdd = document.createTextNode(`${message}`);
-// resultEl.appendChild(resultToAdd);
+  startGame()
+
+ 
+}
 
 
 
