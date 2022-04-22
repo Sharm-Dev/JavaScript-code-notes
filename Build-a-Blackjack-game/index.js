@@ -11,8 +11,12 @@ let cardsEl = document.getElementById("cards");
 
 let sumEl = document.getElementById("sum");
 
-
 function startGame() {
+  renderGame();
+}
+
+
+function renderGame() {
   sumEl.textContent = `Sum: ${sum}`;
   cardsEl.textContent = `Cards: ${firstCard} + ${secondCard}`;
 
@@ -29,12 +33,9 @@ function startGame() {
 };
 
 function newCard() {
-  
   let thirdCard = Math.floor(Math.random() * 11) + 2; 
-
   sum += thirdCard;
-
-  startGame();
+  renderGame();
 }
 
 
