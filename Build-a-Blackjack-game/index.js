@@ -29,19 +29,12 @@ function startGame() {
 };
 
 function newCard() {
-  console.log("Drawing a new card");
-  // 1. Create a card variable, and hard code its value to a number (2-11)
+  
   let thirdCard = Math.floor(Math.random() * 11) + 2; 
-  
-  
-  
-  // 2. Add the new card to the sum variable
 
   sum += thirdCard;
 
-  startGame()
-
- 
+  startGame();
 }
 
 
