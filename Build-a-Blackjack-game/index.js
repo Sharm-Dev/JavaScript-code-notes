@@ -1,10 +1,8 @@
 let firstCard = Math.floor(Math.random() * 11) + 2;
 let secondCard = Math.floor(Math.random() * 11) + 2;
-let thirdCard = Math.floor(Math.random() * 11) + 2; 
-// 1. Create a new array - cards - that contains firstCard and secondCard
-let card = [firstCard, secondCard, thirdCard]; 
-//
+let card = [firstCard, secondCard]; 
 let sum = firstCard + secondCard;
+
 let hasBlackJack = false;
 let isAlive = true;
 
@@ -38,9 +36,12 @@ function renderGame() {
 };
 
 function newCard() {
+  let thirdCard = Math.floor(Math.random() * 11) + 2;
+  // Push the card to the cards array
+  card.push(thirdCard);
   sum += card[2];
+  console.log(card);
   renderGame();
-  
 }
 
 
