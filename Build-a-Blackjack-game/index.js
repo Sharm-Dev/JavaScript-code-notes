@@ -1,5 +1,5 @@
-let firstCard = Math.floor(Math.random() * 11) + 2;
-let secondCard = Math.floor(Math.random() * 11) + 2;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]; 
 let sum = firstCard + secondCard;
 
@@ -12,6 +12,12 @@ let messageEl = document.getElementById("message-el");
 let cardsEl = document.getElementById("cards");
 
 let sumEl = document.getElementById("sum");
+
+// 1. Create a function, getRandomCard(), that always returns the number 5
+
+function getRandomCard() {
+  return Math.floor(Math.random() * 11) + 2;
+}
 
 function startGame() {
   renderGame();
@@ -40,11 +46,9 @@ function renderGame() {
 };
 
 function newCard() {
-  let thirdCard = Math.floor(Math.random() * 11) + 2;
-  // Push the card to the cards array
+  let thirdCard = getRandomCard()
   cards.push(thirdCard);
   sum += thirdCard;
-  console.log(cards);
   renderGame();
 }
 
